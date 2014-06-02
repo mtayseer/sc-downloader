@@ -22,7 +22,9 @@ class SoundCloudClient(object):
         else:
             url = action
 
-        return requests.get(url, stream=stream, params=params)
+        # EXEs packages with PyInstaller has a problem finding cacerts.txt. One way to avoid this 
+        # is to use verify=False
+        return requests.get(url, verify=False, stream=stream, params=params)
 
 
 def normalize(filename):

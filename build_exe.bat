@@ -1,0 +1,1 @@
+pyinstaller sc-downloader.py --onefile --upx-dir="F:\tayseer\tools\upx"
